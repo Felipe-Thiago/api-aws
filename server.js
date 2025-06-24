@@ -34,10 +34,7 @@ app.use(express.json());
 
 
 //#region CRUD MongoDb
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => logInfo('MongoDB conectado', null))
+mongoose.connect(process.env.MONGO_URI).then(() => logInfo('MongoDB conectado', null))
     .catch(err => logError('Erro ao logar mongodb' + err, null, err));
 
 const UserSchema = new mongoose.Schema({
@@ -64,7 +61,7 @@ const User = mongoose.model('Usuario', UserSchema);
 app.get('/mongodb/testar-conexao', async (req, res) => {
     try {
         //Tentando conectar ao MongoDB
-        await mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+        await mongoose.connect(process.env.MONGO_URI);
         const user = await User.findOne(); //Consulta simples (primeiro usuário encontrado)
 
         logInfo('Conexão com o MongoDB efetuada com sucesso', req);
@@ -75,10 +72,8 @@ app.get('/mongodb/testar-conexao', async (req, res) => {
             res.status(200).send('Conexão com o MongoDB bem-sucedida, mas nenhum usuário encontrado.');
         }
     } catch (error) {
-        await logError('Erro ao conectar no MongoDb' + error, req, error);
+        await logError('Erro ao conectar no MongoDb' + req, error.message, error);
         res.status(500).send('Erro na conexão com o MongoDB');
-    } finally {
-        mongoose.connection.close();
     }
 });
 
@@ -131,7 +126,7 @@ app.post('/usuarios', async (req, res) => {
         logInfo('Usuário criado', req);
         res.status(201).send(user);
     } catch (error) {
-        logError("Erro ao criar usuário", req, error);
+        logError("Erro ao criar usuário", req, error, error.message);
         res.status(500).send('Ocorreu um erro interno');
     }
 });
@@ -167,7 +162,7 @@ app.get('/usuarios', async (req, res) => {
         logInfo('Usuários encontrados', req, users);
         res.send(users);
     } catch (error) {
-        logError("Erro ao buscar usuários", req, error);
+        logError("Erro ao buscar usuários", req, error, error.message);
         res.status(500).send('Ocorreu um erro interno');
     }
 
@@ -213,7 +208,7 @@ app.get('/usuarios/:id', async (req, res) => {
         logInfo('Usuário encontrado', req, user);
         res.send(user);
     } catch (error) {
-        logError("Erro ao buscar usuário", req, error);
+        logError("Erro ao buscar usuário", req, error, error.message);
         res.status(500).send('Ocorreu um erro interno');
     }
 
@@ -270,7 +265,7 @@ app.put('/usuarios/:id', async (req, res) => {
         logInfo('Usuário atualizado', req, user);
         res.send(user);
     } catch (error) {
-        logError("Erro ao atualizar usuário", req, error);
+        logError("Erro ao atualizar usuário", req, error, error.message);
         res.status(500).send('Ocorreu um erro interno');
     }
 });
@@ -317,7 +312,7 @@ app.delete('/usuarios/:id', async (req, res) => {
         logInfo('Usuário removido', req);
         res.send({ message: 'Usuário removido com sucesso' });
     } catch (error) {
-        logError("Erro ao remover usuário", req, error)
+        logError("Erro ao remover usuário", req, error, error.message)
         res.status(500).send('Ocorreu um erro interno');
     }
 
@@ -351,7 +346,7 @@ app.get('/buckets', async (req, res) => {
         logInfo('Buckets encontrados', req, data.Buckets);
         res.status(200).json(data.Buckets);
     } catch (error) {
-        logError("Erro ao buscar buckets", req, error);
+        logError("Erro ao buscar buckets", req, error, error.message);
         res.status(500).json({ error: 'Erro ao listar buckets', details: error });
     }
 });
@@ -383,7 +378,7 @@ app.get('/buckets/:bucketName', async (req, res) => {
         logInfo('Objetos encontrados', req, data.Contents);
         res.status(200).json(data.Contents);
     } catch (error) {
-        logError("Erro ao buscar objetos", req, error);
+        logError("Erro ao buscar objetos", req, error, error.message);
         res.status(500).json({ error: 'Erro ao listar objetos do bucket', details: error });
     }
 });
@@ -465,7 +460,7 @@ app.delete('/buckets/:bucketName/file/:fileName', async (req, res) => {
     try {
         logInfo('Objeto removido', req, data.Buckets);
     } catch (error) {
-        logError("Erro ao remover objeto", req, error);
+        logError("Erro ao remover objeto", req, error, error.message);
     }
 });
 //#endregion
