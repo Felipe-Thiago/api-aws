@@ -136,7 +136,7 @@
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-31" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.iconscout.com/icon/free/png-256/free-nginx-3628948-3030173.png;" parent="1" vertex="1">
           <mxGeometry x="132.2" y="560" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;fillColor=#a20025;strokeColor=light-dark(#B2CBFF,#B2CBFF);dashed=1;strokeWidth=4;" parent="1" source="H6Oon9mDKoxW9bWXJ_qD-35" target="H6Oon9mDKoxW9bWXJ_qD-46" edge="1">
+        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#a20025;strokeColor=light-dark(#B2CBFF,#B2CBFF);dashed=1;strokeWidth=4;" parent="1" source="H6Oon9mDKoxW9bWXJ_qD-35" target="H6Oon9mDKoxW9bWXJ_qD-46" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="900" y="220" />
@@ -166,9 +166,6 @@
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-29" value="projetocompras-backend-ec2" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=14;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_ec2_instance_contents;strokeColor=#D86613;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#D86613;dashed=0;" parent="H6Oon9mDKoxW9bWXJ_qD-76" vertex="1">
           <mxGeometry x="20" y="50" width="160" height="138.1" as="geometry" />
         </mxCell>
-        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-32" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.iconscout.com/icon/free/png-256/free-nginx-3628948-3030173.png;" parent="H6Oon9mDKoxW9bWXJ_qD-29" vertex="1">
-          <mxGeometry x="40" y="43.18" width="86" height="86" as="geometry" />
-        </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-75" value="" style="group" parent="H6Oon9mDKoxW9bWXJ_qD-76" vertex="1" connectable="0">
           <mxGeometry x="10" y="8" width="189.5" height="32" as="geometry" />
         </mxCell>
@@ -177,6 +174,12 @@
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-28" value="&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Security Group: projetocompras-backend-sg&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="H6Oon9mDKoxW9bWXJ_qD-75" vertex="1">
           <mxGeometry x="29.5" y="2" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-32" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.iconscout.com/icon/free/png-256/free-nginx-3628948-3030173.png;" parent="H6Oon9mDKoxW9bWXJ_qD-76" vertex="1">
+          <mxGeometry x="110" y="110" width="49.18" height="49.18" as="geometry" />
+        </mxCell>
+        <mxCell id="m0ce2fJHQVsM4_W2PDPC-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://img.vivaolinux.com.br/imagens/dicas/comunidade/duckdns.png;" vertex="1" parent="H6Oon9mDKoxW9bWXJ_qD-76">
+          <mxGeometry x="40" y="104.59000000000003" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-78" value="" style="group;fontColor=light-dark(#000000,#000000);" parent="1" vertex="1" connectable="0">
           <mxGeometry x="830" y="250" width="203" height="199.5" as="geometry" />
