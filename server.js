@@ -5,6 +5,8 @@ const cors = require('cors');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
 
+const mysql = require('mysql2/promise');
+
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -466,6 +468,20 @@ app.delete('/buckets/:bucketName/file/:fileName', async (req, res) => {
 //#endregion
 
 //#region MySql
+
+const DB_NAME = process.env.DB_NAME;
+
+const pool = mysql.createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0,
+    multipleStatements: true
+});
+
 /**
  * @swagger
  * /init-db:
