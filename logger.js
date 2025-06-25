@@ -13,6 +13,18 @@ let sequenceToken = null;
 //Garante que grupo e stream existem
 async function ensureCloudWatchSetup() {
     try {
+
+        if (!LOG_GROUP_NAME || !LOG_STREAM_NAME) {
+            console.error('LOG_GROUP_NAME ou LOG_STREAM_NAME não definidos!');
+            return;
+        }
+
+        console.log('CloudWatch ENV:', {
+            REGION: process.env.REGION,
+            LOG_GROUP_NAME: process.env.LOG_GROUP_NAME,
+            LOG_STREAM_NAME: process.env.LOG_STREAM_NAME
+        });
+
         const groups = await cloudwatchlogs.describeLogGroups({ logGroupNamePrefix: LOG_GROUP_NAME }).promise();
         if (!groups.logGroups.find(g => g.logGroupName === LOG_GROUP_NAME)) {
             await cloudwatchlogs.createLogGroup({ logGroupName: LOG_GROUP_NAME }).promise();
@@ -37,6 +49,16 @@ ensureCloudWatchSetup();
 
 // Enviar log para o CloudWatch
 async function enviarLogCloudWatch(message) {
+    if (!LOG_GROUP_NAME || !LOG_STREAM_NAME) {
+        console.error('LOG_GROUP_NAME ou LOG_STREAM_NAME não definidos!');
+        return;
+    }
+
+    console.log('CloudWatch ENV:', {
+        REGION: process.env.REGION,
+        LOG_GROUP_NAME: process.env.LOG_GROUP_NAME,
+        LOG_STREAM_NAME: process.env.LOG_STREAM_NAME
+    });
     console.log('Enviando log ' + new Date().toISOString());
     const params = {
         logEvents: [
@@ -61,6 +83,7 @@ async function enviarLogCloudWatch(message) {
 
 //Logar informação
 async function logInfo(message, req, extra = {}) {
+
     const log = gerarLog('info', message, req.originalUrl, extra);
 
     await enviarLogCloudWatch(log);

@@ -74,6 +74,7 @@ app.get('/mongodb/testar-conexao', async (req, res) => {
             res.status(200).send('Conexão com o MongoDB bem-sucedida, mas nenhum usuário encontrado.');
         }
     } catch (error) {
+        console.error('Erro ao conectar no MongoDb:', error);
         await logError('Erro ao conectar no MongoDb' + req, error.message, error);
         res.status(500).send('Erro na conexão com o MongoDB');
     }
