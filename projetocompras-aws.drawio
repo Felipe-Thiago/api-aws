@@ -178,7 +178,7 @@
         <mxCell id="k67Nql8nOUypePMKPzLe-12" value="" style="group;fillColor=light-dark(#FFFFFF,#FFFFFF);" vertex="1" connectable="0" parent="1">
           <mxGeometry x="90" y="40" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-4" value="On-Premise" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_on_premise;strokeColor=#858B94;fillColor=light-dark(#000000,#FEFEFE);verticalAlign=top;align=left;spacingLeft=30;fontColor=#858B94;dashed=0;" parent="k67Nql8nOUypePMKPzLe-12" vertex="1">
+        <mxCell id="H6Oon9mDKoxW9bWXJ_qD-4" value="On-Premise" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_on_premise;strokeColor=#858B94;fillColor=light-dark(#FFFFFF,#FEFEFE);verticalAlign=top;align=left;spacingLeft=30;fontColor=#858B94;dashed=0;" parent="k67Nql8nOUypePMKPzLe-12" vertex="1">
           <mxGeometry width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-5" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.home;fillColor=none;" parent="k67Nql8nOUypePMKPzLe-12" vertex="1">
