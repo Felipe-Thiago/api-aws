@@ -17,16 +17,16 @@ COPY . .
 # RUN npm run build
 
 # Usando a imagem oficial do Nginx
-FROM nginx:stable-alpine
+# FROM nginx:stable-alpine
 
 # Copia os arquivos da build do React para o diretório padrão do Nginx
-COPY --from=build /app/build /usr/share/nginx/html
+#COPY --from=build /app/build /usr/share/nginx/html
 
 # Copia a configuração personalizada do Nginx
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expondo a porta 80
-EXPOSE 80
+EXPOSE 3000
 
 # Inicia o Nginxx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server.js"]
