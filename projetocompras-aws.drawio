@@ -175,7 +175,7 @@
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-40" value="&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Security Group: projetocompras-rds-sg&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" parent="H6Oon9mDKoxW9bWXJ_qD-79" vertex="1">
           <mxGeometry x="29.5" y="2" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="k67Nql8nOUypePMKPzLe-12" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="k67Nql8nOUypePMKPzLe-12" value="" style="group;fillColor=light-dark(#FFFFFF,#FFFFFF);" vertex="1" connectable="0" parent="1">
           <mxGeometry x="90" y="40" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-4" value="On-Premise" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_on_premise;strokeColor=#858B94;fillColor=light-dark(#000000,#FEFEFE);verticalAlign=top;align=left;spacingLeft=30;fontColor=#858B94;dashed=0;" parent="k67Nql8nOUypePMKPzLe-12" vertex="1">
@@ -213,9 +213,6 @@
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-17" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://butecotecnologico.com.br/images/wp-content/uploads/2016/01/logo_pm2.png;" parent="k67Nql8nOUypePMKPzLe-14" vertex="1">
           <mxGeometry y="226.59677419354838" width="108.89999999999999" height="30.677419354838708" as="geometry" />
-        </mxCell>
-        <mxCell id="k67Nql8nOUypePMKPzLe-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="k67Nql8nOUypePMKPzLe-14" source="H6Oon9mDKoxW9bWXJ_qD-31" target="H6Oon9mDKoxW9bWXJ_qD-8">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="H6Oon9mDKoxW9bWXJ_qD-31" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.iconscout.com/icon/free/png-256/free-nginx-3628948-3030173.png;" parent="k67Nql8nOUypePMKPzLe-14" vertex="1">
           <mxGeometry x="104.89576857324282" y="208.06451612903226" width="67.74193548387096" height="67.74193548387096" as="geometry" />
