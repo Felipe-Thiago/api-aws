@@ -14,7 +14,7 @@ RUN npm install --force
 COPY . .
 
 # Gera a build da aplicação React
-RUN npm run build
+# RUN npm run build
 
 # Usando a imagem oficial do Nginx
 FROM nginx:stable-alpine
