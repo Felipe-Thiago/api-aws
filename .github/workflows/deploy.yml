@@ -244,7 +244,7 @@ jobs:
             docker pull $IMAGE
 
             echo "🚀 Subindo novo container... $REPO_NAME $IMAGE"
-            docker run -d -p 80:80 \
+            docker run -d -p 80:3000 \
               -e MONGO_URI="${{ secrets.MONGO_URI }}" \
               -e DB_HOST="${{ secrets.DB_HOST }}" \
               -e DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \
