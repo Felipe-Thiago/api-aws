@@ -172,11 +172,11 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: build  # Garante que o job 'build' será executado antes
+    needs: build  # Garante que o job 'build' será executado antes  
 
     steps:
       - name: Definir o nome do repositório (caso não exista)
-        if: !steps.versao.outputs.repo_name
+        if: steps.versao.outputs.repo_name == null || steps.versao.outputs.repo_name == ''
         id: define_repo_name
         run: |
           REPO_NAME="${{ github.repository }}"
