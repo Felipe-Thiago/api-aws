@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const multer = require('multer');
-const multerS3 = require('multer-s3');
+//const multerS3 = require('multer-s3');
 
 const mysql = require('mysql2/promise');
 
